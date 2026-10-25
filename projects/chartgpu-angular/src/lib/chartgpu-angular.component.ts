@@ -237,8 +237,8 @@ export class ChartGpuAngularComponent implements ChartgpuChartHandle, OnDestroy 
   }
 
   @HostListener('click', ['$event'])
-  protected emitClick(event: MouseEvent): void {
-    this.click.emit({ x: event.offsetX, y: event.offsetY });
+  protected emitClick(event: ChartgpuClickEvent): void {
+    this.click.emit({ x: event.x, y: event.y });
   }
 
   protected handleChartClick(event: ChartgpuClickEvent): void {
