@@ -28,6 +28,13 @@
         "build-storybook": {
           "builder": "@storybook/angular:build-storybook",
           "options": {
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": "projects/chartgpu-angular",
+                "output": "/"
+              }
+            ],
             "configDir": "projects/chartgpu-angular/.storybook",
             "browserTarget": "chartgpu-angular:build",
             "tsConfig": "projects/chartgpu-angular/.storybook/tsconfig.json",

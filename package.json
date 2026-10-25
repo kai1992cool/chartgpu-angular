@@ -36,12 +36,12 @@
     "watch": "ng build --watch --project chartgpu-angular",
     "compodoc": "npx compodoc -p /projects/chartgpu-angular/.storybook/tsconfig.doc.json -s",
     "storybook": "ng run chartgpu-angular:storybook",
-    "build-website": "ng build ng-swiper-element-demo && cp projects/ng-swiper-element/README.md dist/ng-swiper-element-demo/browser/README.md && cp LICENSE dist/ng-swiper-element-demo/LICENSE",
+    "build-website": "ng build ng-swiper-element-demo && cp ./README.md dist/ng-swiper-element-demo/browser/README.md && cp ./LICENSE dist/ng-swiper-element-demo/LICENSE",
     "serve:ssr:ng-swiper-element-demo": "node dist/ng-swiper-element-demo/server/server.mjs",
     "build-storybook": "ng run chartgpu-angular:build-storybook",
     "patch": "cd projects/chartgpu-angular && npm version patch --depth 9999 && cd ../..",
     "publish-package": "node scripts/publish-angular.mjs",
-    "publish": "npm run build && cp projects/chartgpu-angular/README.md LICENSE dist/chartgpu-angular && cd dist/chartgpu-angular && npm publish"
+    "publish": "npm run build && cp ./README.md ./LICENSE dist/chartgpu-angular && cd dist/chartgpu-angular && npm publish"
   },
   "dependencies": {
     "@angular/common": "^18.2.0",
