@@ -16,8 +16,7 @@
   "homepage": "https://kai1992cool.github.io/chartgpu-angular/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kai1992cool/chartgpu-angular.git",
-    "directory": "projects/chartgpu-angular"
+    "url": "https://github.com/kai1992cool/chartgpu-angular"
   },
   "bugs": {
     "url": "https://github.com/kai1992cool/chartgpu-angular/issues"
