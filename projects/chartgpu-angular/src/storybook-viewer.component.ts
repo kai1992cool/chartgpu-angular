@@ -30,7 +30,7 @@ import { StorybookShared } from './storybook-shared';
         style="border: none;height: calc(100vh - 75px); width: 100%;"
         sandbox="allow-scripts allow-same-origin"
         referrerpolicy="no-referrer"
-        allow="geolocation 'none'; microphone 'none'; camera 'none'"
+        allow="geolocation 'none'; microphone 'none'; camera 'none'; webgpu"
         [src]="storybookUrl()"
         [title]="'chartgpu-angular Storybook for Angular ' + selectedVersion()"
       ></iframe>

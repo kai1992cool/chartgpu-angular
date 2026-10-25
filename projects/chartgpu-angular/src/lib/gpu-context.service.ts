@@ -60,7 +60,10 @@ export class ChartgpuGPUContextService {
 
       const adapter = await gpu.requestAdapter({ powerPreference: 'high-performance' });
       if (!adapter) {
-        throw new Error('Failed to acquire GPUAdapter');
+        const error = new Error('WebGPU is not available. No compatible GPUAdapter was found.');
+        const state: ChartgpuGPUContextState = { ...INITIAL_STATE, error };
+        this.state.set(state);
+        return state;
       }
 
       const device = await adapter.requestDevice();
