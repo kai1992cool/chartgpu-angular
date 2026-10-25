@@ -16,7 +16,7 @@ const options: ChartgpuOptions = {
   selector: 'app-root',
   standalone: true,
   imports: [ChartGpuAngularComponent],
-  template: ChartGpuAngularComponent
+  template: `
     <main class="demo">
       <h1>ChartGPU-Angular - Standalone</h1>
       <p>Angular 22 demo: real-time streaming line chart</p>
