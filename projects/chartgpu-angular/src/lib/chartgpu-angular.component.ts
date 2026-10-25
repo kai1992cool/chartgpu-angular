@@ -4,6 +4,7 @@ import {
   Component,
   DestroyRef,
   ElementRef,
+  HostListener,
   OnDestroy,
   afterNextRender,
   effect,
@@ -235,8 +236,28 @@ export class ChartGpuAngularComponent implements ChartgpuChartHandle, OnDestroy 
     }, { allowSignalWrites: true });
   }
 
+  @HostListener('click', ['$event'])
   protected emitClick(event: MouseEvent): void {
     this.click.emit({ x: event.offsetX, y: event.offsetY });
+  }
+
+  protected handleChartClick(event: ChartgpuClickEvent): void {
+    this.chartClick.emit(event as unknown as ChartGPUEventPayload);
+  }
+
+  @HostListener('document:visibilitychange')
+  protected handleVisibilityChange(): void {
+    if (typeof document === 'undefined' || document.visibilityState !== 'visible') {
+      return;
+    }
+
+    if (this.resizeTimeout !== undefined) {
+      clearTimeout(this.resizeTimeout);
+    }
+    this.resizeTimeout = setTimeout(() => {
+      this.chartInstance()?.resize();
+      this.resizeTimeout = undefined;
+    }, 0);
   }
 
   ngOnDestroy(): void {
@@ -304,7 +325,6 @@ export class ChartGpuAngularComponent implements ChartgpuChartHandle, OnDestroy 
   }
 
   private listenToChart(instance: ChartGPUInstance): () => void {
-    const click = (payload: ChartGPUEventPayload) => this.chartClick.emit(payload);
     const mouseOver = (payload: ChartGPUEventPayload) => this.mouseOver.emit(payload);
     const mouseOut = (payload: ChartGPUEventPayload) => this.mouseOut.emit(payload);
     const crosshairMove = (payload: ChartGPUCrosshairMovePayload) => this.crosshairMove.emit(payload);
@@ -312,7 +332,6 @@ export class ChartGpuAngularComponent implements ChartgpuChartHandle, OnDestroy 
     const zoomChange = (payload: ChartGPUZoomRangeChangePayload) => this.emitZoomRange(payload);
     const deviceLost = (payload: ChartGPUDeviceLostPayload) => this.deviceLost.emit(payload);
 
-    instance.on('click', click);
     instance.on('mouseover', mouseOver);
     instance.on('mouseout', mouseOut);
     instance.on('crosshairMove', crosshairMove);
@@ -324,7 +343,6 @@ export class ChartGpuAngularComponent implements ChartgpuChartHandle, OnDestroy 
       if (instance.disposed) {
         return;
       }
-      instance.off('click', click);
       instance.off('mouseover', mouseOver);
       instance.off('mouseout', mouseOut);
       instance.off('crosshairMove', crosshairMove);
