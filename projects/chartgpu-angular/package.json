@@ -2,6 +2,17 @@
   "name": "chartgpu-angular",
   "version": "0.0.0",
   "description": "Unnofficial Angular bindings for ChartGPU — WebGPU-powered high-performance charts",
+  "keywords": [
+    "angular",
+    "chartgpu",
+    "react",
+    "chart",
+    "webgpu",
+    "visualization",
+    "streaming",
+    "typescript"
+  ],
+  "homepage": "https://kai1992cool.github.io/chartgpu-angular/",
   "repository": {
     "type": "git",
     "url": "https://github.com/kai1992cool/chartgpu-angular"
