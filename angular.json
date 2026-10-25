@@ -31,7 +31,7 @@
             "assets": [
               {
                 "glob": "README.md",
-                "input": "/",
+                "input": ".",
                 "output": "/"
               }
             ],
@@ -44,7 +44,7 @@
         }
       }
     },
-    
+
     "chartgpu-angular-demo": {
       "projectType": "application",
       "root": "",
