@@ -1,6 +1,16 @@
 {
   "name": "chartgpu-angular",
   "version": "0.0.0",
+  "description": "Unnofficial Angular bindings for ChartGPU — WebGPU-powered high-performance charts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kai1992cool/chartgpu-angular"
+  },
+  "bugs": {
+    "url": "https://github.com/kai1992cool/chartgpu-angular/issues"
+  },
+  "license": "MIT",
+  "author": "Naren",
   "peerDependencies": {
     "@angular/common": ">=18.0.0",
     "@angular/core": ">=18.0.0",

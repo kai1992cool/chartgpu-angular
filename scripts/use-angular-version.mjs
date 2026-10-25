@@ -41,6 +41,11 @@ if (typeof versionPackage.version !== 'string' || !versionPackage.version) {
 
 packageJson.version = versionPackage.version;
 libraryPackage.version = versionPackage.version;
+libraryPackage.description = packageJson.description;
+libraryPackage.repository = packageJson.repository;
+libraryPackage.bugs = packageJson.bugs;
+libraryPackage.license = packageJson.license;
+libraryPackage.author = packageJson.author;
 packageJson.dependencies = versionPackage.dependencies;
 packageJson.devDependencies = versionPackage.devDependencies;
 packageJson.overrides = versionPackage.overrides;
