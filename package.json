@@ -32,7 +32,7 @@
     "ci": "npm run build && npm run test && npm run build-storybook",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build chartgpu-angular",
+    "build": "ng build",
     "watch": "ng build --watch --project chartgpu-angular",
     "compodoc": "npx compodoc -p /projects/chartgpu-angular/.storybook/tsconfig.doc.json -s",
     "storybook": "ng run chartgpu-angular:storybook",
