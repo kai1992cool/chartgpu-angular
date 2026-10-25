@@ -28,8 +28,6 @@ jobs:
       - name: Build Angular demo app
         run: |
           npx ng build chartgpu-angular-demo --base-href /${{ github.event.repository.name }}/
-          cp projects/chartgpu-angular/README.md dist/chartgpu-angular-demo/browser/README.md
-          cp LICENSE dist/chartgpu-angular-demo/LICENSE
           cp dist/chartgpu-angular-demo/browser/index.html dist/chartgpu-angular-demo/browser/404.html
 
       - name: Deploy Angular demo app to GitHub Pages
