@@ -1,0 +1,41 @@
+name: Deploy Website Only to GitHub Pages
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  deploy-demo-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.22.3
+          cache: npm
+
+      - name: Install latest npm
+        run: npm install --global npm@latest
+
+      - name: Apply Angular 22 dependencies
+        run: node scripts/use-angular-version.mjs 22
+
+      - name: Install dependencies
+        run: |
+          npm install --no-package-lock --legacy-peer-deps
+      - name: Build Angular demo app
+        run: |
+          npx ng build ng-swiper-element-demo --base-href /${{ github.event.repository.name }}/
+          cp projects/ng-swiper-element/README.md dist/ng-swiper-element-demo/browser/README.md
+          cp LICENSE dist/ng-swiper-element-demo/LICENSE
+          cp dist/ng-swiper-element-demo/browser/index.html dist/ng-swiper-element-demo/browser/404.html
+
+      - name: Deploy Angular demo app to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/ng-swiper-element-demo/browser
+          publish_branch: gh-pages
+          keep_files: true

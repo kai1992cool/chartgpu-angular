@@ -1,0 +1,46 @@
+{
+  "name": "chartgpu-angular-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "ng build chartgpu-angular",
+    "test": "vitest run",
+    "storybook": "ng run chartgpu-angular:storybook",
+    "build-storybook": "ng run chartgpu-angular:build-storybook",
+    "build:version": "node scripts/build-version.mjs",
+    "build:all": "node scripts/build-all-versions.mjs",
+    "storybook:version": "node scripts/storybook-version.mjs",
+    "ci": "npm run build && npm run test && npm run build-storybook"
+  },
+  "dependencies": {
+    "@angular/common": "^18.2.0",
+    "@angular/compiler": "^18.2.0",
+    "@angular/core": "^18.2.0",
+    "@angular/router": "^18.2.0",
+    "@angular/forms": "^18.2.0",
+    "@angular/platform-browser": "^18.2.0",
+    "@angular/platform-browser-dynamic": "^18.2.0",
+    "chartgpu": "^0.4.0",
+    "marked": "^18.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.10"
+  },
+  "devDependencies": {
+    "@analogjs/vite-plugin-angular": "2.0.0",
+    "@analogjs/vitest-angular": "2.0.0",
+    "@angular-devkit/build-angular": "^18.2.21",
+    "@angular/cli": "^18.2.21",
+    "@angular/compiler-cli": "^18.2.0",
+    "@storybook/addon-a11y": "^10.6.1",
+    "@storybook/addon-docs": "^10.6.1",
+    "@storybook/angular": "^10.6.3",
+    "@types/node": "^18.18.0",
+    "jsdom": "^26.1.0",
+    "ng-packagr": "^18.2.0",
+    "storybook": "^10.6.1",
+    "typescript": "~5.4.5",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  }
+}

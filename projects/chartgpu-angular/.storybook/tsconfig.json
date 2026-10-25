@@ -1,0 +1,14 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+    "skipLibCheck": true
+  },
+  "include": [
+    "./preview.ts",
+    "./*.stories.ts",
+    "./stories/**/*.stories.ts",
+    "./stories/**/*.ts",
+    "../src/**/*.stories.ts"
+  ]
+}

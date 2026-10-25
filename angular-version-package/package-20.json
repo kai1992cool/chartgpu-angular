@@ -1,0 +1,34 @@
+{
+  "version": "20.0.0",
+  "dependencies": {
+    "@angular/common": "^20.3.0",
+    "@angular/compiler": "^20.3.0",
+    "@angular/core": "^20.3.0",
+    "@angular/router": "^20.3.0",
+    "@angular/forms": "^20.3.0",
+    "@angular/platform-browser": "^20.3.0",
+    "@angular/platform-browser-dynamic": "^20.3.0",
+    "chartgpu": "^0.4.0",
+    "marked": "^18.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@analogjs/vite-plugin-angular": "2.0.0",
+    "@analogjs/vitest-angular": "2.0.0",
+    "@angular-devkit/build-angular": "^20.3.0",
+    "@angular/cli": "^20.3.38",
+    "@angular/compiler-cli": "^20.3.0",
+    "@storybook/addon-a11y": "^10.6.1",
+    "@storybook/addon-docs": "^10.6.1",
+    "@storybook/angular": "^10.6.3",
+    "@types/node": "^18.18.0",
+    "jsdom": "^26.1.0",
+    "ng-packagr": "^20.3.0",
+    "storybook": "^10.6.1",
+    "typescript": "~5.9.2",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  }
+}

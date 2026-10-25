@@ -1,0 +1,18 @@
+{
+  "supported": [
+    {
+      "angular": "18",
+      "storybook": "8",
+      "tag": "angular18"
+    },
+    {
+      "angular": "19",
+      "storybook": "8",
+      "tag": "angular19"
+    }
+  ],
+  "default": {
+    "angular": "18",
+    "storybook": "8"
+  }
+}

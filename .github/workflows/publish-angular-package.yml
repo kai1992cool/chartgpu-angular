@@ -1,0 +1,65 @@
+name: Publish Angular Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      angular-major-versions:
+        description: Angular major versions to publish, comma-separated. Leave blank for all versions.
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  publish:
+    environment: DEV
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        angular-version: ${{ fromJson(github.event.inputs.angular-major-versions == '' && '[18,19,20,21,22]' || format('[{0}]', join(github.event.inputs.angular-major-versions, ','))) }}
+    steps:
+      - name: Validate Angular versions input
+        shell: python
+        run: |
+          import os
+          import sys
+
+          raw = os.environ.get('INPUT_ANGULAR_MAJOR_VERSIONS', '').strip()
+          if not raw:
+              sys.exit(0)
+
+          allowed = {'18', '19', '20', '21', '22'}
+          versions = [item.strip() for item in raw.split(',') if item.strip()]
+          invalid = [item for item in versions if item not in allowed]
+
+          if invalid:
+              raise SystemExit(
+                  f"Invalid angular-major-versions value(s): {', '.join(invalid)}. Allowed values are 18,19,20,21,22 or blank."
+              )
+      - name: Checkout branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.22.3
+          registry-url: 'https://registry.npmjs.org'
+          cache: npm
+
+      - name: Install latest npm
+        run: npm install --global npm@latest
+
+      - name: Apply Angular version dependencies
+        run: node scripts/use-angular-version.mjs ${{ matrix.angular-version }}
+
+      - name: Install dependencies
+        run: npm install --no-package-lock
+
+      - name: Build and publish Angular package
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm run publish-package ${{ matrix.angular-version }} --provenance --access public

@@ -1,0 +1,2056 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "ChartgpuAnimationOptions",
+            "id": "interface-ChartgpuAnimationOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuAnimationOptions",
+            "properties": [
+                {
+                    "name": "durationMs",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 35,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "enabled",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 34,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuAnnotationOptions",
+            "id": "interface-ChartgpuAnnotationOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuAnnotationOptions",
+            "properties": [
+                {
+                    "name": "bands",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ReadonlyArray<{ from: number; to: number }>",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 46,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "lineX",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ReadonlyArray<number>",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 44,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "lineY",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ReadonlyArray<number>",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 45,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "markers",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ReadonlyArray<{ x: number; y: number; label?: string }>",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 47,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuAxisOptions",
+            "id": "interface-ChartgpuAxisOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuAxisOptions",
+            "properties": [
+                {
+                    "name": "type",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"linear\" | \"time\" | \"log\" | \"category\"",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 18,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "x",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 16,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "y",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 17,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuClickEvent",
+            "id": "interface-ChartgpuClickEvent-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuClickEvent",
+            "properties": [
+                {
+                    "name": "x",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 96,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "y",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 97,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuInteractionOptions",
+            "id": "interface-ChartgpuInteractionOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuInteractionOptions",
+            "properties": [
+                {
+                    "name": "crosshair",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 64,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "hitTest",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 65,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "syncGroup",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 66,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuOptions",
+            "id": "interface-ChartgpuOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuOptions",
+            "properties": [
+                {
+                    "name": "animation",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuAnimationOptions",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 76,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "annotations",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuAnnotationOptions",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 78,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "axes",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuAxisOptions",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 73,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "chart3d",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuThreeDOptions",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 79,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "gpuContext",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "{ sharedDevice?: boolean }",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 82,
+                    "subProperties": [
+                        {
+                            "name": "sharedDevice",
+                            "type": "boolean",
+                            "optional": true,
+                            "description": "",
+                            "rawdescription": "\n"
+                        }
+                    ],
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "interaction",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuInteractionOptions",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 81,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "renderMode",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"internal\" | \"external\"",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 72,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "series",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ReadonlyArray<ChartgpuSeriesOptions>",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 70,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "streaming",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuStreamingOptions",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 80,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "theme",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuThemeOptions",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 77,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "title",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 71,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "tooltip",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuTooltipOptions",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 75,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "zoom",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuZoomOptions",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 74,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuReadyEvent",
+            "id": "interface-ChartgpuReadyEvent-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuReadyEvent",
+            "properties": [
+                {
+                    "name": "container",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "HTMLDivElement",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 86,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuResizeEvent",
+            "id": "interface-ChartgpuResizeEvent-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuResizeEvent",
+            "properties": [
+                {
+                    "name": "container",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "HTMLDivElement",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 92,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "height",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 91,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "width",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 90,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuSeriesData",
+            "id": "interface-ChartgpuSeriesData-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuSeriesData",
+            "properties": [
+                {
+                    "name": "x",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ReadonlyArray<number>",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 4,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "y",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ReadonlyArray<number>",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 5,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuSeriesOptions",
+            "id": "interface-ChartgpuSeriesOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuSeriesOptions",
+            "properties": [
+                {
+                    "name": "color",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 12,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "data",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuSeriesData",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "name",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 11,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "type",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuSeriesType",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 9,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuStreamingOptions",
+            "id": "interface-ChartgpuStreamingOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuStreamingOptions",
+            "properties": [
+                {
+                    "name": "enabled",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 58,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "maxPoints",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 59,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "sharedDevice",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 60,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuThemeOptions",
+            "id": "interface-ChartgpuThemeOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuThemeOptions",
+            "properties": [
+                {
+                    "name": "palette",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ReadonlyArray<string>",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 40,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "preset",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"light\" | \"dark\"",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 39,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuThreeDOptions",
+            "id": "interface-ChartgpuThreeDOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuThreeDOptions",
+            "properties": [
+                {
+                    "name": "camera",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "{ distance?: number; elevation?: number; azimuth?: number }",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 52,
+                    "subProperties": [
+                        {
+                            "name": "distance",
+                            "type": "number",
+                            "optional": true,
+                            "description": "",
+                            "rawdescription": "\n"
+                        },
+                        {
+                            "name": "elevation",
+                            "type": "number",
+                            "optional": true,
+                            "description": "",
+                            "rawdescription": "\n"
+                        },
+                        {
+                            "name": "azimuth",
+                            "type": "number",
+                            "optional": true,
+                            "description": "",
+                            "rawdescription": "\n"
+                        }
+                    ],
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "enabled",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 51,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "pointCloud",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 53,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "surface",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 54,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuTooltipOptions",
+            "id": "interface-ChartgpuTooltipOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuTooltipOptions",
+            "properties": [
+                {
+                    "name": "enabled",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 29,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "shared",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 30,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuZoomChangeEvent",
+            "id": "interface-ChartgpuZoomChangeEvent-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuZoomChangeEvent",
+            "properties": [
+                {
+                    "name": "range",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "{ start: number; end: number }",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 101,
+                    "subProperties": [
+                        {
+                            "name": "start",
+                            "type": "number",
+                            "optional": false,
+                            "description": "",
+                            "rawdescription": "\n"
+                        },
+                        {
+                            "name": "end",
+                            "type": "number",
+                            "optional": false,
+                            "description": "",
+                            "rawdescription": "\n"
+                        }
+                    ],
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        },
+        {
+            "name": "ChartgpuZoomOptions",
+            "id": "interface-ChartgpuZoomOptions-8b66a77e5b3e012a8dae55211d9abcbf72f5cef7f8e2220ff7fea6025c78c74f4d8f51d8d4d52523cbe4520506503fffeb08bfb1fd7214f773be91648b6faa91",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export type ChartgpuSeriesType = 'line' | 'area' | 'bar' | 'candlestick' | 'scatter';\n\nexport interface ChartgpuSeriesData {\n  x: ReadonlyArray<number>;\n  y: ReadonlyArray<number>;\n}\n\nexport interface ChartgpuSeriesOptions {\n  type: ChartgpuSeriesType;\n  data: ChartgpuSeriesData;\n  name?: string;\n  color?: string;\n}\n\nexport interface ChartgpuAxisOptions {\n  x?: string;\n  y?: string;\n  type?: 'linear' | 'time' | 'log' | 'category';\n}\n\nexport interface ChartgpuZoomOptions {\n  enabled?: boolean;\n  pan?: boolean;\n  pinch?: boolean;\n  resetOnDoubleClick?: boolean;\n}\n\nexport interface ChartgpuTooltipOptions {\n  enabled?: boolean;\n  shared?: boolean;\n}\n\nexport interface ChartgpuAnimationOptions {\n  enabled?: boolean;\n  durationMs?: number;\n}\n\nexport interface ChartgpuThemeOptions {\n  preset?: 'light' | 'dark';\n  palette?: ReadonlyArray<string>;\n}\n\nexport interface ChartgpuAnnotationOptions {\n  lineX?: ReadonlyArray<number>;\n  lineY?: ReadonlyArray<number>;\n  bands?: ReadonlyArray<{ from: number; to: number }>;\n  markers?: ReadonlyArray<{ x: number; y: number; label?: string }>;\n}\n\nexport interface ChartgpuThreeDOptions {\n  enabled?: boolean;\n  camera?: { distance?: number; elevation?: number; azimuth?: number };\n  pointCloud?: boolean;\n  surface?: boolean;\n}\n\nexport interface ChartgpuStreamingOptions {\n  enabled?: boolean;\n  maxPoints?: number;\n  sharedDevice?: boolean;\n}\n\nexport interface ChartgpuInteractionOptions {\n  crosshair?: boolean;\n  hitTest?: boolean;\n  syncGroup?: string;\n}\n\nexport interface ChartgpuOptions {\n  series: ReadonlyArray<ChartgpuSeriesOptions>;\n  title?: string;\n  renderMode?: 'internal' | 'external';\n  axes?: ChartgpuAxisOptions;\n  zoom?: ChartgpuZoomOptions;\n  tooltip?: ChartgpuTooltipOptions;\n  animation?: ChartgpuAnimationOptions;\n  theme?: ChartgpuThemeOptions;\n  annotations?: ChartgpuAnnotationOptions;\n  chart3d?: ChartgpuThreeDOptions;\n  streaming?: ChartgpuStreamingOptions;\n  interaction?: ChartgpuInteractionOptions;\n  gpuContext?: { sharedDevice?: boolean };\n}\n\nexport interface ChartgpuReadyEvent {\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuResizeEvent {\n  width: number;\n  height: number;\n  container: HTMLDivElement;\n}\n\nexport interface ChartgpuClickEvent {\n  x: number;\n  y: number;\n}\n\nexport interface ChartgpuZoomChangeEvent {\n  range: { start: number; end: number };\n}\n",
+            "displayName": "ChartgpuZoomOptions",
+            "properties": [
+                {
+                    "name": "enabled",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 22,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "pan",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 23,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "pinch",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 24,
+                    "rawdescription": "\n"
+                },
+                {
+                    "name": "resetOnDoubleClick",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 25,
+                    "rawdescription": "\n"
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "ChartgpuAngularComponent",
+            "id": "component-ChartgpuAngularComponent-793edb1ea500868ff5c25b57f99f0e7bd7b9b19ae564b13fa7d56e755fa3232f237f909a9bd4c9ae0d6a295188f8257b7fba63389c7131a95922dbdf0404b8bf",
+            "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "host": {},
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "lib-chartgpu-angular",
+            "styleUrls": [],
+            "styles": [
+                "\n    :host {\n      display: block;\n    }\n\n    .chartgpu-shell {\n      display: grid;\n      gap: 0.75rem;\n    }\n\n    .chartgpu-host {\n      position: relative;\n      min-height: 320px;\n      border-radius: 0.75rem;\n      overflow: hidden;\n      background: linear-gradient(135deg, color-mix(in srgb, currentColor 7%, transparent), transparent);\n    }\n\n    .chartgpu-fallback,\n    .chartgpu-overlay {\n      position: absolute;\n      inset: 0;\n      display: grid;\n      place-items: center;\n      padding: 1rem;\n      text-align: center;\n    }\n\n    .chartgpu-overlay {\n      align-content: end;\n      justify-items: start;\n      pointer-events: none;\n      gap: 0.5rem;\n    }\n\n    .chartgpu-series-chip,\n    .chartgpu-legend-item {\n      border-radius: 999px;\n      padding: 0.25rem 0.75rem;\n      background: color-mix(in srgb, currentColor 10%, transparent);\n    }\n\n    .chartgpu-legend {\n      display: flex;\n      flex-wrap: wrap;\n      gap: 0.5rem;\n    }\n  "
+            ],
+            "template": "<section class=\"chartgpu-shell\">\n  @if (title()) {\n    <header class=\"chartgpu-header\">\n      <h3>{{ title() }}</h3>\n    </header>\n  }\n\n  <div #host class=\"chartgpu-host\" [style.height]=\"height()\" [style.width]=\"width()\" (click)=\"emitClick($event)\">\n    @if (!isBrowserReady()) {\n      <p class=\"chartgpu-fallback\">{{ fallbackText() }}</p>\n    } @else {\n      @if (options(); as chartOptions) {\n        <div class=\"chartgpu-overlay\">\n          @for (series of chartOptions.series; track series.name ?? $index) {\n            <span class=\"chartgpu-series-chip\">{{ series.name ?? ('Series ' + ($index + 1)) }}</span>\n          }\n        </div>\n      }\n    }\n  </div>\n\n  @if (showLegend() && options(); as chartOptions) {\n    <footer class=\"chartgpu-legend\">\n      @for (series of chartOptions.series; track series.name ?? $index) {\n        <span class=\"chartgpu-legend-item\">{{ series.name ?? ('Series ' + ($index + 1)) }}</span>\n      }\n    </footer>\n  }\n</section>\n",
+            "templateUrl": [],
+            "templateVariables": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "fallbackText",
+                    "coverageIgnore": false,
+                    "defaultValue": "'ChartGPU requires WebGPU support.'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 113,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                },
+                {
+                    "name": "height",
+                    "coverageIgnore": false,
+                    "defaultValue": "'400px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 112,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                },
+                {
+                    "name": "isBrowserReady",
+                    "coverageIgnore": false,
+                    "defaultValue": "typeof navigator !== 'undefined' && 'gpu' in navigator",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 124,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        124,
+                        148
+                    ],
+                    "required": false
+                },
+                {
+                    "name": "options",
+                    "coverageIgnore": false,
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuOptions | null",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 109,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                },
+                {
+                    "name": "showLegend",
+                    "coverageIgnore": false,
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 114,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                },
+                {
+                    "name": "title",
+                    "coverageIgnore": false,
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 110,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                },
+                {
+                    "name": "width",
+                    "coverageIgnore": false,
+                    "defaultValue": "'100%'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 111,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "click",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuClickEvent",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 118,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                },
+                {
+                    "name": "deviceLost",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Event",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 120,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                },
+                {
+                    "name": "ready",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuReadyEvent",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 116,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                },
+                {
+                    "name": "resize",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuResizeEvent",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 117,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                },
+                {
+                    "name": "zoomChange",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuZoomChangeEvent",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 119,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ],
+                    "required": false
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "host",
+                    "coverageIgnore": false,
+                    "defaultValue": "viewChild<ElementRef<HTMLDivElement>>('host')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 122,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        148
+                    ]
+                },
+                {
+                    "name": "hostSize",
+                    "coverageIgnore": false,
+                    "defaultValue": "signal({ width: 0, height: 0 })",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 125,
+                    "rawdescription": "\n",
+                    "modifierKind": [
+                        124,
+                        148
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "emitClick",
+                    "coverageIgnore": false,
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 149,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n",
+                    "description": "",
+                    "modifierKind": [
+                        124
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "emitZoomChange",
+                    "coverageIgnore": false,
+                    "args": [
+                        {
+                            "name": "range",
+                            "type": "{ start: number; end: number }",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 153,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n",
+                    "description": "",
+                    "modifierKind": [
+                        124
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "range",
+                            "type": "{ start: number; end: number }",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "observeResize",
+                    "coverageIgnore": false,
+                    "args": [
+                        {
+                            "name": "container",
+                            "type": "HTMLDivElement",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 157,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n",
+                    "description": "",
+                    "modifierKind": [
+                        123
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "container",
+                            "type": "HTMLDivElement",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "coverageIgnore": false,
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  DestroyRef,\n  ElementRef,\n  afterNextRender,\n  effect,\n  input,\n  output,\n  signal,\n  viewChild,\n} from '@angular/core';\nimport {\n  ChartgpuClickEvent,\n  ChartgpuOptions,\n  ChartgpuReadyEvent,\n  ChartgpuResizeEvent,\n  ChartgpuZoomChangeEvent,\n} from './chartgpu-angular.types';\n\n@Component({\n  selector: 'lib-chartgpu-angular',\n  standalone: true,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  host: {\n    class: 'chartgpu-angular'\n  },\n  template: `\n    <section class=\"chartgpu-shell\">\n      @if (title()) {\n        <header class=\"chartgpu-header\">\n          <h3>{{ title() }}</h3>\n        </header>\n      }\n\n      <div #host class=\"chartgpu-host\" [style.height]=\"height()\" [style.width]=\"width()\" (click)=\"emitClick($event)\">\n        @if (!isBrowserReady()) {\n          <p class=\"chartgpu-fallback\">{{ fallbackText() }}</p>\n        } @else {\n          @if (options(); as chartOptions) {\n            <div class=\"chartgpu-overlay\">\n              @for (series of chartOptions.series; track series.name ?? $index) {\n                <span class=\"chartgpu-series-chip\">{{ series.name ?? ('Series ' + ($index + 1)) }}</span>\n              }\n            </div>\n          }\n        }\n      </div>\n\n      @if (showLegend() && options(); as chartOptions) {\n        <footer class=\"chartgpu-legend\">\n          @for (series of chartOptions.series; track series.name ?? $index) {\n            <span class=\"chartgpu-legend-item\">{{ series.name ?? ('Series ' + ($index + 1)) }}</span>\n          }\n        </footer>\n      }\n    </section>\n  `,\n  styles: [`\n    :host {\n      display: block;\n    }\n\n    .chartgpu-shell {\n      display: grid;\n      gap: 0.75rem;\n    }\n\n    .chartgpu-host {\n      position: relative;\n      min-height: 320px;\n      border-radius: 0.75rem;\n      overflow: hidden;\n      background: linear-gradient(135deg, color-mix(in srgb, currentColor 7%, transparent), transparent);\n    }\n\n    .chartgpu-fallback,\n    .chartgpu-overlay {\n      position: absolute;\n      inset: 0;\n      display: grid;\n      place-items: center;\n      padding: 1rem;\n      text-align: center;\n    }\n\n    .chartgpu-overlay {\n      align-content: end;\n      justify-items: start;\n      pointer-events: none;\n      gap: 0.5rem;\n    }\n\n    .chartgpu-series-chip,\n    .chartgpu-legend-item {\n      border-radius: 999px;\n      padding: 0.25rem 0.75rem;\n      background: color-mix(in srgb, currentColor 10%, transparent);\n    }\n\n    .chartgpu-legend {\n      display: flex;\n      flex-wrap: wrap;\n      gap: 0.5rem;\n    }\n  `]\n})\nexport class ChartgpuAngularComponent {\n  readonly options = input<ChartgpuOptions | null>(null);\n  readonly title = input<string>('');\n  readonly width = input<string>('100%');\n  readonly height = input<string>('400px');\n  readonly fallbackText = input<string>('ChartGPU requires WebGPU support.');\n  readonly showLegend = input<boolean>(true);\n\n  readonly ready = output<ChartgpuReadyEvent>();\n  readonly resize = output<ChartgpuResizeEvent>();\n  readonly click = output<ChartgpuClickEvent>();\n  readonly zoomChange = output<ChartgpuZoomChangeEvent>();\n  readonly deviceLost = output<Event>();\n\n  readonly host = viewChild<ElementRef<HTMLDivElement>>('host');\n\n  protected readonly isBrowserReady = input<boolean>(typeof navigator !== 'undefined' && 'gpu' in navigator);\n  protected readonly hostSize = signal({ width: 0, height: 0 });\n\n  constructor(private readonly destroyRef: DestroyRef) {\n    afterNextRender(() => {\n      const host = this.host();\n      if (!host || !this.isBrowserReady()) {\n        return;\n      }\n\n      this.ready.emit({ container: host.nativeElement });\n      this.observeResize(host.nativeElement);\n    });\n\n    effect(() => {\n      this.options();\n      this.title();\n      this.width();\n      this.height();\n      this.showLegend();\n      this.hostSize();\n      this.destroyRef.onDestroy(() => void 0);\n    });\n  }\n\n  protected emitClick(event: MouseEvent): void {\n    this.click.emit({ x: event.offsetX, y: event.offsetY });\n  }\n\n  protected emitZoomChange(range: { start: number; end: number }): void {\n    this.zoomChange.emit({ range });\n  }\n\n  private observeResize(container: HTMLDivElement): void {\n    if (typeof ResizeObserver === 'undefined') {\n      return;\n    }\n\n    const observer = new ResizeObserver(entries => {\n      const entry = entries[0];\n      if (!entry) {\n        return;\n      }\n\n      const { width, height } = entry.contentRect;\n      this.hostSize.set({ width, height });\n      this.resize.emit({ width, height, container });\n    });\n\n    observer.observe(container);\n    this.destroyRef.onDestroy(() => observer.disconnect());\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n    :host {\n      display: block;\n    }\n\n    .chartgpu-shell {\n      display: grid;\n      gap: 0.75rem;\n    }\n\n    .chartgpu-host {\n      position: relative;\n      min-height: 320px;\n      border-radius: 0.75rem;\n      overflow: hidden;\n      background: linear-gradient(135deg, color-mix(in srgb, currentColor 7%, transparent), transparent);\n    }\n\n    .chartgpu-fallback,\n    .chartgpu-overlay {\n      position: absolute;\n      inset: 0;\n      display: grid;\n      place-items: center;\n      padding: 1rem;\n      text-align: center;\n    }\n\n    .chartgpu-overlay {\n      align-content: end;\n      justify-items: start;\n      pointer-events: none;\n      gap: 0.5rem;\n    }\n\n    .chartgpu-series-chip,\n    .chartgpu-legend-item {\n      border-radius: 999px;\n      padding: 0.25rem 0.75rem;\n      background: color-mix(in srgb, currentColor 10%, transparent);\n    }\n\n    .chartgpu-legend {\n      display: flex;\n      flex-wrap: wrap;\n      gap: 0.5rem;\n    }\n  \n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "destroyRef",
+                        "type": "DestroyRef",
+                        "optional": false,
+                        "dotDotDotToken": false,
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 125,
+                "rawdescription": "\n",
+                "jsdoctags": [
+                    {
+                        "name": "destroyRef",
+                        "type": "DestroyRef",
+                        "optional": false,
+                        "dotDotDotToken": false,
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "relationships": {
+                "incoming": [],
+                "outgoing": []
+            }
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Annotations",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'Annotations',\n  args: {\n    options: {\n      ...baseSeries,\n      title: 'Annotations',\n      annotations: {\n        lineX: [1, 3],\n        lineY: [12, 18],\n        bands: [{ from: 1.5, to: 2.5 }],\n        markers: [{ x: 2, y: 11, label: 'Target' }]\n      }\n    },\n    title: 'Annotations',\n    fallbackText: 'Line markers, bands, markers, and authoring API are configured here.'\n  }\n}"
+            },
+            {
+                "name": "baseSeries",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ChartgpuOptions",
+                "defaultValue": "{\n  series: [\n    {\n      type: 'line',\n      name: 'Revenue',\n      data: {\n        x: [0, 1, 2, 3, 4],\n        y: [10, 14, 11, 17, 20]\n      },\n      color: '#4f46e5'\n    },\n    {\n      type: 'area',\n      name: 'Forecast',\n      data: {\n        x: [0, 1, 2, 3, 4],\n        y: [8, 12, 10, 15, 18]\n      },\n      color: '#22c55e'\n    },\n    {\n      type: 'bar',\n      name: 'Volume',\n      data: {\n        x: [0, 1, 2, 3, 4],\n        y: [3, 5, 4, 6, 7]\n      },\n      color: '#f59e0b'\n    },\n    {\n      type: 'scatter',\n      name: 'Signals',\n      data: {\n        x: [0.3, 1.2, 2.5, 3.6],\n        y: [2, 4, 3, 5]\n      },\n      color: '#ec4899'\n    },\n    {\n      type: 'candlestick',\n      name: 'Candles',\n      data: {\n        x: [0, 1, 2, 3],\n        y: [4, 6, 5, 7]\n      },\n      color: '#14b8a6'\n    }\n  ],\n  axes: {\n    x: 'time',\n    y: 'value',\n    type: 'linear'\n  },\n  zoom: {\n    enabled: true,\n    pan: true,\n    pinch: true,\n    resetOnDoubleClick: true\n  },\n  tooltip: {\n    enabled: true,\n    shared: true\n  },\n  animation: {\n    enabled: true,\n    durationMs: 350\n  }\n}"
+            },
+            {
+                "name": "config",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/main.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StorybookConfig",
+                "defaultValue": "{\n  stories: ['../src/**/*.stories.@(ts|mdx)', './*.stories.@(ts|mdx)'],\n  addons: ['@storybook/addon-docs'],\n  framework: {\n    name: '@storybook/angular',\n    options: {}\n  }\n}"
+            },
+            {
+                "name": "Interaction",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'Interaction',\n  args: {\n    options: {\n      ...baseSeries,\n      title: 'Interaction',\n      interaction: {\n        crosshair: true,\n        hitTest: true,\n        syncGroup: 'dashboard-a'\n      },\n      zoom: {\n        enabled: true,\n        pan: true,\n        pinch: true,\n        resetOnDoubleClick: true\n      },\n      tooltip: {\n        enabled: true,\n        shared: true\n      }\n    },\n    title: 'Interaction',\n    fallbackText: 'Events, zoom/pan, hit-testing, and crosshair sync belong here.'\n  }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ChartgpuAngularComponent>",
+                "defaultValue": "{\n  title: 'ChartGPU/Angular Wrapper',\n  component: ChartgpuAngularComponent,\n  args: {\n    title: 'ChartGPU Angular',\n    width: '100%',\n    height: '420px',\n    showLegend: true,\n    options: baseSeries\n  },\n  parameters: {\n    layout: 'fullscreen',\n    docs: {\n      description: {\n        component: 'Feature stories for the Angular wrapper around ChartGPU. Each story focuses on a documented ChartGPU capability group.'\n      }\n    }\n  }\n}"
+            },
+            {
+                "name": "OptionsAndSeries",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'Options and series',\n  args: {\n    options: baseSeries\n  }\n}"
+            },
+            {
+                "name": "parameters",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/preview.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  actions: { argTypesRegex: '^on[A-Z].*' },\n  controls: {\n    matchers: {\n      color: /(background|color)$/i,\n      date: /Date$/i\n    }\n  }\n}"
+            },
+            {
+                "name": "Streaming",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'Streaming',\n  args: {\n    options: {\n      ...baseSeries,\n      title: 'Streaming updates',\n      streaming: {\n        enabled: true,\n        maxPoints: 5000,\n        sharedDevice: true\n      },\n      gpuContext: {\n        sharedDevice: true\n      }\n    },\n    title: 'Streaming',\n    fallbackText: 'Use appendData with maxPoints for live updates and shared GPU context for dashboards.'\n  }\n}"
+            },
+            {
+                "name": "Themes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'Themes',\n  args: {\n    options: {\n      ...baseSeries,\n      title: 'Themes',\n      theme: {\n        preset: 'dark',\n        palette: ['#60a5fa', '#a78bfa', '#34d399', '#f59e0b']\n      }\n    },\n    title: 'Themes',\n    fallbackText: 'Theme presets and palette overrides are demonstrated here.'\n  }\n}"
+            },
+            {
+                "name": "ThreeDCharts",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: '3D charts',\n  args: {\n    options: {\n      ...baseSeries,\n      title: '3D charts',\n      chart3d: {\n        enabled: true,\n        pointCloud: true,\n        surface: true,\n        camera: {\n          distance: 10,\n          elevation: 35,\n          azimuth: 20\n        }\n      }\n    },\n    title: '3D charts',\n    fallbackText: 'cartesian3d, point clouds, surfaces, and camera controls are represented here.'\n  }\n}"
+            },
+            {
+                "name": "Troubleshooting",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "coverageIgnore": false,
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'Troubleshooting',\n  args: {\n    options: {\n      ...baseSeries,\n      title: 'Troubleshooting',\n      renderMode: 'external'\n    },\n    title: 'Troubleshooting',\n    fallbackText: 'Check WebGPU availability, container sizing, cleanup, and zoom shimmer notes.'\n  }\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "ChartgpuSeriesType",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "coverageIgnore": false,
+                "rawtype": "\"line\" | \"area\" | \"bar\" | \"candlestick\" | \"scatter\"",
+                "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "rawdescription": "",
+                "description": "",
+                "kind": 193
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "coverageIgnore": false,
+                "rawtype": "StoryObj<ChartgpuAngularComponent>",
+                "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "rawdescription": "",
+                "description": "",
+                "kind": 184
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts": [
+                {
+                    "name": "Annotations",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Annotations',\n  args: {\n    options: {\n      ...baseSeries,\n      title: 'Annotations',\n      annotations: {\n        lineX: [1, 3],\n        lineY: [12, 18],\n        bands: [{ from: 1.5, to: 2.5 }],\n        markers: [{ x: 2, y: 11, label: 'Target' }]\n      }\n    },\n    title: 'Annotations',\n    fallbackText: 'Line markers, bands, markers, and authoring API are configured here.'\n  }\n}"
+                },
+                {
+                    "name": "baseSeries",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ChartgpuOptions",
+                    "defaultValue": "{\n  series: [\n    {\n      type: 'line',\n      name: 'Revenue',\n      data: {\n        x: [0, 1, 2, 3, 4],\n        y: [10, 14, 11, 17, 20]\n      },\n      color: '#4f46e5'\n    },\n    {\n      type: 'area',\n      name: 'Forecast',\n      data: {\n        x: [0, 1, 2, 3, 4],\n        y: [8, 12, 10, 15, 18]\n      },\n      color: '#22c55e'\n    },\n    {\n      type: 'bar',\n      name: 'Volume',\n      data: {\n        x: [0, 1, 2, 3, 4],\n        y: [3, 5, 4, 6, 7]\n      },\n      color: '#f59e0b'\n    },\n    {\n      type: 'scatter',\n      name: 'Signals',\n      data: {\n        x: [0.3, 1.2, 2.5, 3.6],\n        y: [2, 4, 3, 5]\n      },\n      color: '#ec4899'\n    },\n    {\n      type: 'candlestick',\n      name: 'Candles',\n      data: {\n        x: [0, 1, 2, 3],\n        y: [4, 6, 5, 7]\n      },\n      color: '#14b8a6'\n    }\n  ],\n  axes: {\n    x: 'time',\n    y: 'value',\n    type: 'linear'\n  },\n  zoom: {\n    enabled: true,\n    pan: true,\n    pinch: true,\n    resetOnDoubleClick: true\n  },\n  tooltip: {\n    enabled: true,\n    shared: true\n  },\n  animation: {\n    enabled: true,\n    durationMs: 350\n  }\n}"
+                },
+                {
+                    "name": "Interaction",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Interaction',\n  args: {\n    options: {\n      ...baseSeries,\n      title: 'Interaction',\n      interaction: {\n        crosshair: true,\n        hitTest: true,\n        syncGroup: 'dashboard-a'\n      },\n      zoom: {\n        enabled: true,\n        pan: true,\n        pinch: true,\n        resetOnDoubleClick: true\n      },\n      tooltip: {\n        enabled: true,\n        shared: true\n      }\n    },\n    title: 'Interaction',\n    fallbackText: 'Events, zoom/pan, hit-testing, and crosshair sync belong here.'\n  }\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ChartgpuAngularComponent>",
+                    "defaultValue": "{\n  title: 'ChartGPU/Angular Wrapper',\n  component: ChartgpuAngularComponent,\n  args: {\n    title: 'ChartGPU Angular',\n    width: '100%',\n    height: '420px',\n    showLegend: true,\n    options: baseSeries\n  },\n  parameters: {\n    layout: 'fullscreen',\n    docs: {\n      description: {\n        component: 'Feature stories for the Angular wrapper around ChartGPU. Each story focuses on a documented ChartGPU capability group.'\n      }\n    }\n  }\n}"
+                },
+                {
+                    "name": "OptionsAndSeries",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Options and series',\n  args: {\n    options: baseSeries\n  }\n}"
+                },
+                {
+                    "name": "Streaming",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Streaming',\n  args: {\n    options: {\n      ...baseSeries,\n      title: 'Streaming updates',\n      streaming: {\n        enabled: true,\n        maxPoints: 5000,\n        sharedDevice: true\n      },\n      gpuContext: {\n        sharedDevice: true\n      }\n    },\n    title: 'Streaming',\n    fallbackText: 'Use appendData with maxPoints for live updates and shared GPU context for dashboards.'\n  }\n}"
+                },
+                {
+                    "name": "Themes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Themes',\n  args: {\n    options: {\n      ...baseSeries,\n      title: 'Themes',\n      theme: {\n        preset: 'dark',\n        palette: ['#60a5fa', '#a78bfa', '#34d399', '#f59e0b']\n      }\n    },\n    title: 'Themes',\n    fallbackText: 'Theme presets and palette overrides are demonstrated here.'\n  }\n}"
+                },
+                {
+                    "name": "ThreeDCharts",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: '3D charts',\n  args: {\n    options: {\n      ...baseSeries,\n      title: '3D charts',\n      chart3d: {\n        enabled: true,\n        pointCloud: true,\n        surface: true,\n        camera: {\n          distance: 10,\n          elevation: 35,\n          azimuth: 20\n        }\n      }\n    },\n    title: '3D charts',\n    fallbackText: 'cartesian3d, point clouds, surfaces, and camera controls are represented here.'\n  }\n}"
+                },
+                {
+                    "name": "Troubleshooting",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Troubleshooting',\n  args: {\n    options: {\n      ...baseSeries,\n      title: 'Troubleshooting',\n      renderMode: 'external'\n    },\n    title: 'Troubleshooting',\n    fallbackText: 'Check WebGPU availability, container sizing, cleanup, and zoom shimmer notes.'\n  }\n}"
+                }
+            ],
+            "projects/chartgpu-angular/.storybook/main.ts": [
+                {
+                    "name": "config",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/main.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StorybookConfig",
+                    "defaultValue": "{\n  stories: ['../src/**/*.stories.@(ts|mdx)', './*.stories.@(ts|mdx)'],\n  addons: ['@storybook/addon-docs'],\n  framework: {\n    name: '@storybook/angular',\n    options: {}\n  }\n}"
+                }
+            ],
+            "projects/chartgpu-angular/.storybook/preview.ts": [
+                {
+                    "name": "parameters",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chartgpu-angular/.storybook/preview.ts",
+                    "coverageIgnore": false,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  actions: { argTypesRegex: '^on[A-Z].*' },\n  controls: {\n    matchers: {\n      color: /(background|color)$/i,\n      date: /Date$/i\n    }\n  }\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts": [
+                {
+                    "name": "ChartgpuSeriesType",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "coverageIgnore": false,
+                    "rawtype": "\"line\" | \"area\" | \"bar\" | \"candlestick\" | \"scatter\"",
+                    "file": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "",
+                    "description": "",
+                    "kind": 193
+                }
+            ],
+            "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "coverageIgnore": false,
+                    "rawtype": "StoryObj<ChartgpuAngularComponent>",
+                    "file": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "children": []
+    },
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Annotations",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "baseSeries",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Interaction",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "OptionsAndSeries",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Streaming",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Themes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ThreeDCharts",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Troubleshooting",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/chartgpu-angular.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/main.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "config",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "parameters",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ChartgpuAngularComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/19",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuAnimationOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuAnnotationOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuAxisOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuClickEvent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuInteractionOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/14",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuReadyEvent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuResizeEvent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuSeriesData",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuSeriesOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuStreamingOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuThemeOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuThreeDOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuTooltipOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuZoomChangeEvent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ChartgpuZoomOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chartgpu-angular/src/lib/chartgpu-angular.types.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "ChartgpuSeriesType",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

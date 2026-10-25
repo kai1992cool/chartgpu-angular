@@ -1,0 +1,45 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "chartgpu-angular": {
+      "projectType": "library",
+      "root": "projects/chartgpu-angular",
+      "sourceRoot": "projects/chartgpu-angular/src",
+      "prefix": "cga",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/chartgpu-angular/ng-package.json"
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/chartgpu-angular/.storybook",
+            "browserTarget": "chartgpu-angular:build",
+            "tsConfig": "projects/chartgpu-angular/.storybook/tsconfig.json",
+            "port": 6006,
+            "compodoc": false
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/chartgpu-angular/.storybook",
+            "browserTarget": "chartgpu-angular:build",
+            "tsConfig": "projects/chartgpu-angular/.storybook/tsconfig.json",
+            "outputDir": "dist/storybook/chartgpu-angular",
+            "compodoc": false
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "packageManager": "npm",
+    "analytics": false
+  }
+}

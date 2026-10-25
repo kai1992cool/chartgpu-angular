@@ -1,0 +1,8 @@
+/node_modules
+/dist
+/dist-storybook
+/.angular
+/out-tsc
+/coverage
+.env
+.DS_Store
