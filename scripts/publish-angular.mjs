@@ -132,7 +132,7 @@ if (useAngularVersion.status !== 0) {
 const libraryPackagePath = resolve(
   root,
   "projects",
-  "ng-swiper-element",
+  "chartgpu-angular",
   "package.json",
 );
 const versionPackagePath = resolve(
@@ -164,12 +164,12 @@ if (shouldPatch) {
 }
 
 runNpm(["install", "--no-package-lock"]);
-runNpm(["run", "build", "--", "ng-swiper-element"]);
+runNpm(["run", "build", "--", "chartgpu-angular"]);
 
-const outputDirectory = resolve(root, "dist", "ng-swiper-element");
+const outputDirectory = resolve(root, "dist", "chartgpu-angular");
 await Promise.all([
   copyFile(
-    resolve(root, "projects", "ng-swiper-element", "README.md"),
+    resolve(root, "projects", "chartgpu-angular", "README.md"),
     resolve(outputDirectory, "README.md"),
   ),
   copyFile(resolve(root, "LICENSE"), resolve(outputDirectory, "LICENSE")),

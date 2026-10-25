@@ -28,7 +28,7 @@ import { marked } from 'marked';
   template: `
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <span class="navbar-brand" routerLink="/">ng-swiper-element</span>
+        <span class="navbar-brand" routerLink="/">chartgpu-angular</span>
         <button
           class="navbar-toggler"
           type="button"
@@ -67,38 +67,38 @@ import { marked } from 'marked';
           <span class="d-flex gap-3 align-items-center asdfasdf">
             <a
               class="github-button"
-              href="https://github.com/kai1992cool/ng-swiper-element"
+              href="https://github.com/kai1992cool/chartgpu-angular"
               data-color-scheme="no-preference: light; light: light; dark: dark;"
               data-size="large"
               data-show-count="true"
-              aria-label="Star kai1992cool/ng-swiper-element on GitHub"
+              aria-label="Star kai1992cool/chartgpu-angular on GitHub"
               >Star</a
             >
             <a
               class="github-button"
-              href="https://github.com/kai1992cool/ng-swiper-element/issues"
+              href="https://github.com/kai1992cool/chartgpu-angular/issues"
               data-color-scheme="no-preference: light; light: light; dark: dark;"
               data-size="large"
               data-show-count="true"
-              aria-label="Issue kai1992cool/ng-swiper-element on GitHub"
+              aria-label="Issue kai1992cool/chartgpu-angular on GitHub"
               >Issue</a
             >
             <a
               class="nav-link d-flex gap-2 align-items-center text-info-emphasis"
-              href="https://github.com/kai1992cool/ng-swiper-element"
+              href="https://github.com/kai1992cool/chartgpu-angular"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View ng-swiper-element on GitHub"
+              aria-label="View chartgpu-angular on GitHub"
             >
               <i class="fa-brands fa-github"></i>
               <span class="hidden sm:inline">GitHub</span>
             </a>
             <a
               class="nav-link d-flex gap-2 align-items-center text-info-emphasis"
-              href="https://www.npmjs.com/package/ng-swiper-element"
+              href="https://www.npmjs.com/package/chartgpu-angular"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View ng-swiper-element on npm"
+              aria-label="View chartgpu-angular on npm"
             >
               <i class="fa-brands fa-npm"></i>
               <span class="sr-only sm:not-sr-only">npm</span>
@@ -177,7 +177,7 @@ export class AppComponent extends StorybookShared {
 
   private createStorybookUrl(version: string): SafeResourceUrl {
     const url = new URL(
-      `/ng-swiper-element/v${version}/`,
+      `/chartgpu-angular/v${version}/`,
       this.document.location.href
     );
     return this.sanitizer.bypassSecurityTrustResourceUrl(url.toString());
@@ -189,7 +189,7 @@ export class AppComponent extends StorybookShared {
       this.angularVersions.map(async (version) => {
         try {
           const url = new URL(
-            `../ng-swiper-element/v${version}/index.html`,
+            `../chartgpu-angular/v${version}/index.html`,
             this.document.location.href
           );
           const response = await fetch(url, {
@@ -241,7 +241,7 @@ export class AppComponent extends StorybookShared {
     try {
       // route the README one folder before the current location, since the README is in the root of the project
       const readmeUrl = new URL(
-        `../ng-swiper-element/v${version}/README.md`,
+        `../chartgpu-angular/v${version}/README.md`,
         (this.document as any).location.href
       );
       const response = await fetch(readmeUrl);

@@ -27,15 +27,15 @@ jobs:
           npm install --no-package-lock --legacy-peer-deps
       - name: Build Angular demo app
         run: |
-          npx ng build ng-swiper-element-demo --base-href /${{ github.event.repository.name }}/
-          cp projects/ng-swiper-element/README.md dist/ng-swiper-element-demo/browser/README.md
-          cp LICENSE dist/ng-swiper-element-demo/LICENSE
-          cp dist/ng-swiper-element-demo/browser/index.html dist/ng-swiper-element-demo/browser/404.html
+          npx ng build chartgpu-angular-demo --base-href /${{ github.event.repository.name }}/
+          cp projects/chartgpu-angular/README.md dist/chartgpu-angular-demo/browser/README.md
+          cp LICENSE dist/chartgpu-angular-demo/LICENSE
+          cp dist/chartgpu-angular-demo/browser/index.html dist/chartgpu-angular-demo/browser/404.html
 
       - name: Deploy Angular demo app to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/ng-swiper-element-demo/browser
+          publish_dir: ./dist/chartgpu-angular-demo/browser
           publish_branch: gh-pages
           keep_files: true

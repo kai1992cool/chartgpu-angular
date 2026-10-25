@@ -21,7 +21,7 @@ const versionPackagePath = resolve(
 const libraryPackagePath = resolve(
   root,
   'projects',
-  'ng-swiper-element',
+  'chartgpu-angular',
   'package.json',
 );
 

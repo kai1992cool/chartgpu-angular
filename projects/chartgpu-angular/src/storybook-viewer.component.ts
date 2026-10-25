@@ -32,7 +32,7 @@ import { StorybookShared } from './storybook-shared';
         referrerpolicy="no-referrer"
         allow="geolocation 'none'; microphone 'none'; camera 'none'"
         [src]="storybookUrl()"
-        [title]="'ng-swiper-element Storybook for Angular ' + selectedVersion()"
+        [title]="'chartgpu-angular Storybook for Angular ' + selectedVersion()"
       ></iframe>
     </section>
   `,
