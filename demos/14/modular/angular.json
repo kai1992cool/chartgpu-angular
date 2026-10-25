@@ -15,7 +15,7 @@
             "outputPath": "dist/modular-14",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.js",
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [],
             "styles": [
