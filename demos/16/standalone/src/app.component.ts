@@ -1,6 +1,5 @@
 import { Component, DestroyRef, inject, viewChild } from '@angular/core';
-import { ChartgpuAngularComponent } from '../../../projects/chartgpu-angular/src/lib/chartgpu-angular.component';
-import type { ChartgpuOptions } from '../../../projects/chartgpu-angular/src/lib/chartgpu-angular.types';
+import { ChartGpuAngularComponent, type ChartgpuOptions } from 'chartgpu-angular';
 
 const options: ChartgpuOptions = {
   xAxis: { type: 'value' },
@@ -16,7 +15,7 @@ const options: ChartgpuOptions = {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ChartgpuAngularComponent],
+  imports: [ChartGpuAngularComponent],
   template: `
     <main class="demo">
       <h1>ChartGPU-Angular - Standalone</h1>
@@ -44,7 +43,7 @@ export class AppComponent {
   readonly options = options;
   readonly chartStyle = { width: '100%', height: '360px' };
 
-  private readonly chartComponent = viewChild(ChartgpuAngularComponent);
+  private readonly chartComponent = viewChild(ChartGpuAngularComponent);
   private readonly destroyRef = inject(DestroyRef);
   private timer: ReturnType<typeof setInterval> | undefined;
   private x = 0;

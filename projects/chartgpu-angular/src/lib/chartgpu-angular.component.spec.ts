@@ -1,20 +1,20 @@
 import { TestBed } from '@angular/core/testing';
-import { ChartgpuAngularComponent } from './chartgpu-angular.component';
+import { ChartGpuAngularComponent } from './chartgpu-angular.component';
 
-describe('ChartgpuAngularComponent', () => {
+describe('ChartGpuAngularComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ChartgpuAngularComponent]
+      imports: [ChartGpuAngularComponent]
     });
   });
 
   it('should create', () => {
-    const fixture = TestBed.createComponent(ChartgpuAngularComponent);
+    const fixture = TestBed.createComponent(ChartGpuAngularComponent);
     expect(fixture.componentInstance).toBeTruthy();
   });
 
   it('exposes safe imperative defaults before a chart is ready', () => {
-    const fixture = TestBed.createComponent(ChartgpuAngularComponent);
+    const fixture = TestBed.createComponent(ChartGpuAngularComponent);
     const component = fixture.componentInstance;
 
     expect(component.getChart()).toBeNull();
@@ -27,7 +27,7 @@ describe('ChartgpuAngularComponent', () => {
   });
 
   it('emits local click coordinates', () => {
-    const fixture = TestBed.createComponent(ChartgpuAngularComponent);
+    const fixture = TestBed.createComponent(ChartGpuAngularComponent);
     const click = vi.fn();
     fixture.componentInstance.click.subscribe(click);
     fixture.componentRef.setInput('options', { series: [] });
@@ -46,7 +46,7 @@ describe('ChartgpuAngularComponent', () => {
     Object.defineProperty(globalThis, 'navigator', { configurable: true, value: {} });
 
     try {
-      const fixture = TestBed.createComponent(ChartgpuAngularComponent);
+      const fixture = TestBed.createComponent(ChartGpuAngularComponent);
       fixture.componentRef.setInput('options', { series: [] });
       fixture.detectChanges();
 

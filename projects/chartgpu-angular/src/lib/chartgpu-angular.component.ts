@@ -85,7 +85,7 @@ import type {
     }
   `],
 })
-export class ChartgpuAngularComponent implements ChartgpuChartHandle, OnDestroy {
+export class ChartGpuAngularComponent implements ChartgpuChartHandle, OnDestroy {
   readonly options = input.required<ChartgpuOptions>();
   readonly gpuContext = input<ChartgpuGPUContext | null>(null);
   readonly theme = input<ChartgpuOptions['theme'] | undefined>(undefined);

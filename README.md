@@ -53,11 +53,12 @@ Example usage:
 
 ```ts
 import { Component } from '@angular/core';
-import { ChartGPUComponent } from 'chartgpu-angular';
+import { ChartGPUComponent, provideChartGpuContext } from 'chartgpu-angular';
 
 @Component({
   standalone: true,
   imports: [ChartGPUComponent],
+  providers: [provideChartGpuContext()],
   template: `<lib-chartgpu-angular />`,
 })
 export class ExampleComponent {}
@@ -80,15 +81,16 @@ Choose the setup that matches your Angular application.
 
 ### Standalone application
 
-Import `ChartGPUComponent` from `chartgpu-angular` and add it to the `imports` array of each standalone component that uses it:
+Import `ChartGPUComponent` from `chartgpu-angular` and add it to the `imports` array of each standalone component that uses it. Add `provideChartGpuContext()` to the component or application providers when you want a shared GPU context service:
 
 ```ts
 import { Component } from '@angular/core';
-import { ChartGPUComponent } from 'chartgpu-angular';
+import { ChartGPUComponent, provideChartGpuContext } from 'chartgpu-angular';
 
 @Component({
   standalone: true,
   imports: [ChartGPUComponent],
+  providers: [provideChartGpuContext()],
   template: `<lib-chartgpu-angular />`,
 })
 export class ExampleComponent {}
@@ -96,17 +98,18 @@ export class ExampleComponent {}
 
 ### NgModule application
 
-Import `ChartGPUComponent` in the `imports` array of the module that declares the component using it:
+Import `ChartGPUComponent` in the `imports` array of the module that declares the component using it. If you need the shared GPU context service, provide it from the module providers with `provideChartGpuContext()`:
 
 ```ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { ChartGPUComponent } from 'chartgpu-angular';
+import { ChartGPUComponent, provideChartGpuContext } from 'chartgpu-angular';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, ChartGPUComponent],
+  providers: [provideChartGpuContext()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

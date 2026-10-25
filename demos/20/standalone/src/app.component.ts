@@ -1,6 +1,5 @@
 import { Component, DestroyRef, inject, viewChild } from '@angular/core';
-import { ChartgpuAngularComponent } from '../../../projects/chartgpu-angular/src/lib/chartgpu-angular.component';
-import type { ChartgpuOptions } from '../../../projects/chartgpu-angular/src/lib/chartgpu-angular.types';
+import { ChartGpuAngularComponent, type ChartgpuOptions } from 'chartgpu-angular';
 
 const options: ChartgpuOptions = {
   xAxis: { type: 'value' },
@@ -17,7 +16,7 @@ const options: ChartgpuOptions = {
   selector: 'app-root',
   standalone: true,
   imports: [ChartgpuAngularComponent],
-  template: `
+  template: ChartGpuAngularComponent
     <main class="demo">
       <h1>ChartGPU-Angular - Standalone</h1>
       <p>Angular 20 demo: real-time streaming line chart</p>
@@ -45,7 +44,7 @@ export class AppComponent {
   readonly chartStyle = { width: '100%', height: '360px' };
 
   private readonly chartComponent = viewChild(ChartgpuAngularComponent);
-  private readonly destroyRef = inject(DestroyRef);
+  private readonly destroyRef = inject(DestroyChartGpuAngularComponent
   private timer: ReturnType<typeof setInterval> | undefined;
   private x = 0;
 

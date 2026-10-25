@@ -1,5 +1,5 @@
 import type { Meta } from "@storybook/angular";
-import { ChartgpuAngularComponent as ChartGpuAngularComponent } from "../../src/lib/chartgpu-angular.component";
+import { ChartGpuAngularComponent as ChartGpuAngularComponent } from "../../src/lib/chartgpu-angular.component";
 
 export function createOptionsMeta(
   section: string,

@@ -65,7 +65,7 @@ const chartgpuVersion = packageJson.dependencies.chartgpu;
 
 if (chartgpuVersion) {
   libraryPackage.peerDependencies.chartgpu = chartgpuVersion;
-  libraryPackage.devDependencies.chartgpu = chartgpuVersion;
+  // libraryPackage.devDependencies.chartgpu = chartgpuVersion;
 }
 
 await Promise.all([

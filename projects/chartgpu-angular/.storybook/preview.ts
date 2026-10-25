@@ -1,3 +1,5 @@
+import { provideChartGpuContext } from '../src/lib/gpu-context.provider';
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
@@ -7,3 +9,11 @@ export const parameters = {
     }
   }
 };
+
+export const decorators = [
+  (story: unknown) => ({
+    providers: [provideChartGpuContext()],
+    template: '<ng-container *ngComponentOutlet="story"></ng-container>',
+    props: { story },
+  }),
+];

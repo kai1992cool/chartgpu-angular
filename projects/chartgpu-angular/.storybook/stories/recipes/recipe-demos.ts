@@ -5,7 +5,7 @@ import {
   type ChartGPUOptions,
   type ScatterPointTuple,
 } from 'chartgpu';
-import { ChartgpuAngularComponent } from '../../../src/lib/chartgpu-angular.component';
+import { ChartGpuAngularComponent } from '../../../src/lib/chartgpu-angular.component';
 import { ChartgpuConnectChartsDirective } from '../../../src/lib/connect-charts.directive';
 
 const crosshairOptions: ChartGPUOptions = {
@@ -33,7 +33,7 @@ const zoomOptions: ChartGPUOptions = {
 @Component({
   selector: 'storybook-crosshair-recipe',
   standalone: true,
-  imports: [ChartgpuAngularComponent],
+  imports: [ChartGpuAngularComponent],
   template: `
     <p>Crosshair X: {{ x === null ? 'none' : x.toFixed(2) }}</p>
     <lib-chartgpu-angular
@@ -54,7 +54,7 @@ export class CrosshairRecipeComponent {
 @Component({
   selector: 'storybook-datazoom-recipe',
   standalone: true,
-  imports: [ChartgpuAngularComponent],
+  imports: [ChartGpuAngularComponent],
   template: `
     <p>
       Zoom: {{ zoom ? zoom.start.toFixed(2) + ' → ' + zoom.end.toFixed(2) : 'none' }}
@@ -93,7 +93,7 @@ const syncOptionsB: ChartGPUOptions = {
 @Component({
   selector: 'storybook-chart-sync-recipe',
   standalone: true,
-  imports: [ChartgpuAngularComponent, ChartgpuConnectChartsDirective],
+  imports: [ChartGpuAngularComponent, ChartgpuConnectChartsDirective],
   template: `
     <section
       [libChartgpuConnectCharts]="charts()"
@@ -150,7 +150,7 @@ const annotationOptions: ChartGPUOptions = {
 @Component({
   selector: 'storybook-annotation-authoring-recipe',
   standalone: true,
-  imports: [ChartgpuAngularComponent],
+  imports: [ChartGpuAngularComponent],
   template: `
     <p>Right-click the chart to add and edit annotations.</p>
     <lib-chartgpu-angular
@@ -163,7 +163,7 @@ const annotationOptions: ChartGPUOptions = {
   styles: [':host { display: block; height: 420px; }'],
 })
 export class AnnotationAuthoringRecipeComponent {
-  private readonly chartComponent = viewChild(ChartgpuAngularComponent);
+  private readonly chartComponent = viewChild(ChartGpuAngularComponent);
   private readonly destroyRef = inject(DestroyRef);
   private authoring: ReturnType<typeof createAnnotationAuthoring> | undefined;
 
@@ -221,7 +221,7 @@ function createDensityOptions(): ChartGPUOptions {
 @Component({
   selector: 'storybook-scatter-density-recipe',
   standalone: true,
-  imports: [ChartgpuAngularComponent],
+  imports: [ChartGpuAngularComponent],
   template: `
     <lib-chartgpu-angular [options]="options" [style]="chartStyle" theme="dark" />
   `,
@@ -243,7 +243,7 @@ const streamingLineOptions: ChartGPUOptions = {
 @Component({
   selector: 'storybook-streaming-line-recipe',
   standalone: true,
-  imports: [ChartgpuAngularComponent],
+  imports: [ChartGpuAngularComponent],
   template: `
     <lib-chartgpu-angular
       [options]="options"
@@ -255,7 +255,7 @@ const streamingLineOptions: ChartGPUOptions = {
   styles: [':host { display: block; height: 360px; }'],
 })
 export class StreamingLineRecipeComponent {
-  private readonly chartComponent = viewChild(ChartgpuAngularComponent);
+  private readonly chartComponent = viewChild(ChartGpuAngularComponent);
   private readonly destroyRef = inject(DestroyRef);
   private timer: ReturnType<typeof setInterval> | undefined;
   private x = 0;
@@ -300,7 +300,7 @@ const streamingCandlesOptions: ChartGPUOptions = {
 @Component({
   selector: 'storybook-streaming-candles-recipe',
   standalone: true,
-  imports: [ChartgpuAngularComponent],
+  imports: [ChartGpuAngularComponent],
   template: `
     <lib-chartgpu-angular
       [options]="options"
@@ -312,7 +312,7 @@ const streamingCandlesOptions: ChartGPUOptions = {
   styles: [':host { display: block; height: 420px; }'],
 })
 export class StreamingCandlesRecipeComponent {
-  private readonly chartComponent = viewChild(ChartgpuAngularComponent);
+  private readonly chartComponent = viewChild(ChartGpuAngularComponent);
   private readonly destroyRef = inject(DestroyRef);
   private timer: ReturnType<typeof setInterval> | undefined;
   private last = 100;
