@@ -36,6 +36,39 @@
           }
         }
       }
+    },
+    
+    "chartgpu-angular-demo": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "projects/chartgpu-angular/src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/chartgpu-angular-demo",
+            "index": "projects/chartgpu-angular/src/index.html",
+            "browser": "projects/chartgpu-angular/src/main.ts",
+            "polyfills": [],
+            "tsConfig": "projects/chartgpu-angular/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "/"
+              }
+            ],
+            "scripts": [
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/chartgpu-angular/src/styles/styles.css"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
