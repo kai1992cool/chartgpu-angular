@@ -57,15 +57,15 @@ for (const dependency of ['@angular/common', '@angular/core']) {
 }
 
 // const tslibVersion = packageJson.dependencies.tslib;
-const swiperVersion = packageJson.dependencies.swiper;
+const chartgpuVersion = packageJson.dependencies.chartgpu;
 // if (!tslibVersion) {
 //   throw new Error(`package-${version}.json is missing tslib`);
 // }
 // libraryPackage.dependencies.tslib = tslibVersion;
 
-if (swiperVersion) {
-  libraryPackage.peerDependencies.swiper = swiperVersion;
-  libraryPackage.devDependencies.swiper = swiperVersion;
+if (chartgpuVersion) {
+  libraryPackage.peerDependencies.chartgpu = chartgpuVersion;
+  libraryPackage.devDependencies.chartgpu = chartgpuVersion;
 }
 
 await Promise.all([
