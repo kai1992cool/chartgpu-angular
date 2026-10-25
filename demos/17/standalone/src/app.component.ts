@@ -15,7 +15,7 @@ const options: ChartgpuOptions = {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ChartgpuAngularComponent],
+  imports: [ChartGpuAngularComponent],
   template: ChartGpuAngularComponent
     <main class="demo">
       <h1>ChartGPU-Angular - Standalone</h1>
@@ -43,8 +43,8 @@ export class AppComponent {
   readonly options = options;
   readonly chartStyle = { width: '100%', height: '360px' };
 
-  private readonly chartComponent = viewChild(ChartgpuAngularComponent);
-  private readonly destroyRef = inject(DestroyChartGpuAngularComponent
+  private readonly chartComponent = viewChild(ChartGpuAngularComponent);
+  private readonly destroyRef = inject(DestroyRef);
   private timer: ReturnType<typeof setInterval> | undefined;
   private x = 0;
 

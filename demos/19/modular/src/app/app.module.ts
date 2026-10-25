@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, ChartgpuAngularComponent],
-  providers: [provideChartgChartGpuAngularComponent
+  imports: [BrowserModule, ChartGpuAngularComponent],
+  providers: [provideChartGpuContext()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
