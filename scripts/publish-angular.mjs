@@ -169,7 +169,7 @@ runNpm(["run", "build", "--", "chartgpu-angular"]);
 const outputDirectory = resolve(root, "dist", "chartgpu-angular");
 await Promise.all([
   copyFile(
-    resolve(root, "projects", "chartgpu-angular", "README.md"),
+    resolve(root, "README.md"),
     resolve(outputDirectory, "README.md"),
   ),
   copyFile(resolve(root, "LICENSE"), resolve(outputDirectory, "LICENSE")),
