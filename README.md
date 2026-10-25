@@ -16,6 +16,11 @@ Angular workspace for the chartgpu-angular library.
 - automation ready scripts for local and CI use
 - CI/CD ready workflows for build, test, and documentation publishing
 
+## Live demos
+
+The [demo website](https://kai1992cool.github.io/chartgpu-angular/demos) works
+in Chrome but currently does not work in Brave.
+
 ## Chart components and shared GPU features
 
 Import `ChartGPUComponent` into a standalone component to render charts. It
