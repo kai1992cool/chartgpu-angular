@@ -190,3 +190,7 @@ hr {
 .readme-content table tbody tr:nth-child(odd) {
   background-color: rgba(255, 255, 255, 0.05);
 }
+
+.navbar-brand {
+  cursor: pointer !important;
+}
