@@ -2,7 +2,7 @@
   "name": "chartgpu-angular-workspace",
   "version": "0.0.0",
   "private": true,
-  "description": "React bindings for ChartGPU — WebGPU-powered high-performance charts",
+  "description": "Angular bindings for ChartGPU — WebGPU-powered high-performance charts",
   "keywords": [
     "angular",
     "chartgpu",
