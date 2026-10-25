@@ -71,7 +71,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
+          publish_dir: ./dist/storybook/chartgpu-angular
           publish_branch: gh-pages
           destination_dir: v${{ matrix.angular-version }}
           keep_files: true

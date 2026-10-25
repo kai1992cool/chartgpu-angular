@@ -2,6 +2,28 @@
   "name": "chartgpu-angular-workspace",
   "version": "0.0.0",
   "private": true,
+  "description": "React bindings for ChartGPU — WebGPU-powered high-performance charts",
+  "keywords": [
+    "angular",
+    "chartgpu",
+    "react",
+    "chart",
+    "webgpu",
+    "visualization",
+    "streaming",
+    "typescript"
+  ],
+  "homepage": "https://kai1992cool.github.io/chartgpu-angular/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kai1992cool/chartgpu-angular.git",
+    "directory": "projects/chartgpu-angular"
+  },
+  "bugs": {
+    "url": "https://github.com/kai1992cool/chartgpu-angular/issues"
+  },
+  "license": "MIT",
+  "author": "Naren",
   "scripts": {
     "build": "ng build chartgpu-angular",
     "test": "vitest run",
