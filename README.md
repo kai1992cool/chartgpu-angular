@@ -35,6 +35,8 @@ npm install chartgpu-angular
 
 StackBlitz examples will be added as each Angular version's rollout is published.
 
+> If you click the link for Standalone and NgModule examples are stuck in clone step, please refresh the screen, the stackblitz will initialize
+
 | Angular version | Standalone example | NgModule example | Documentation |
 | --------------- | ------------------ | ---------------- | ------------- |
 | Angular 14 | [Modular Demo](https://stackblitz.com/github/kai1992cool/chartgpu-angular/tree/main/demos/14/modular) | [Standalone Demo](https://stackblitz.com/github/kai1992cool/chartgpu-angular/tree/main/demos/14/standalone) | [Storybook](https://kai1992cool.github.io/chartgpu-angular/demos?version=14) |
